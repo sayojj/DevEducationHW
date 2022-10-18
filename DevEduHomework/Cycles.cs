@@ -13,7 +13,7 @@ namespace DevEduHomework
             }
                 return result;
         }
-        public static int SquareIsLessThanNumber(int number)
+        public static int NumbersUpTo1000Divisible(int number)
         {
             int result = 1;
             for (int i = 1; i < 1000; i++)
