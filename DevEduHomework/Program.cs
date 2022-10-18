@@ -17,8 +17,6 @@ a[2] = 13;
 int[] b = new int[] {12, 2, 1, -4};
 int[] c = {1, 2, 4, 6};*/
 
-int[] a = new int[10];
-for(int i = 0; i < a.Length; i++)
-{
-    a[i] = i*i;
-}
+int[] a = { -3, 0, 22, 2, 131, 40 };
+Console.WriteLine(CustomArray.FindMaxValue(a));
+Console.WriteLine(CustomArray.FindMixValue(a));
