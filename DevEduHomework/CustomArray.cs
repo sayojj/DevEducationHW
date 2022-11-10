@@ -9,28 +9,28 @@ namespace DevEduHomework
 {
     public static class CustomArray
     {
-        public static int FindMixValue(int[] array)
+        public static int FindMinValue(int[] array)
         {
             if (array.Length == 0)
             {
-                throw new ArgumentException("Array length = 0");
+                throw new ArgumentException("the length of the array is zero");
             }
-            int mix = array[0];
+            int min = array[0];
             for (int i = 1; i < array.Length; i++)
             {
                 int crnt = array[i];
-                if (mix > crnt)
+                if (min > crnt)
                 {
-                    mix = crnt;
+                    min = crnt;
                 }
             }
-                return mix;
+                return min;
         }
         public static int FindMaxValue(int[] array)
         {
             if (array.Length == 0)
             {
-                throw new ArgumentException("Array length = 0");
+                throw new ArgumentException("the length of the array is zero");
             }
             int max = array[0];
             for (int i = 1; i < array.Length; i++)
@@ -42,6 +42,56 @@ namespace DevEduHomework
                 }
             }
                 return max;
-        } 
+        }
+        public static int FindIndexOfMinValue(int[] array)
+        {
+            if (array.Length == 0)
+            {
+                throw new ArgumentException("the length of the array is zero");
+            }
+            int min = array[0];
+            int result = 0;
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (min > array[i])
+                {
+                    min = array[i];
+                    result = i;
+                }
+            }
+            return result;
+        }
+
+        public static int FindIndexOfMaxValue(int[] array)
+        {
+            if (array.Length == 0)
+            {
+                throw new ArgumentException("the length of the array is zero");
+            }
+            int max = array[0];
+            int result = 0;
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (max < array[i])
+                {
+                    max = array[i];
+                    result = i;
+                }
+            }
+            return result;
+        }
+        public static int FindSumOfNumbersIndex(int[] array)
+        {
+            if (array.Length == 0)
+            {
+                throw new ArgumentException("the length of the array is zero");
+            }
+            int result = 0;
+            for (int i = 1; i < array.Length; i += 2)
+            {
+                result += array[i];
+            }
+            return result;
+        }
     }
 }
